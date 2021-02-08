@@ -1,0 +1,16 @@
+.Filters {
+    &.panel {
+      margin-bottom: 5px;
+  
+      @media screen and (min-width: $mobile-breakpoint) {
+        margin-bottom: 20px;
+      }
+  
+      &-heading:hover {
+        cursor: pointer;
+      }
+      &-title {
+        font-weight: 600;
+      }
+    }
+  }
