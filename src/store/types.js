@@ -11,8 +11,9 @@ export const types = {
     uiStartLoading: '[UI] Start loading',
     uiFinishLoading: '[UI] Finish loading',
 
-    charaptersLoad: '[Charapter] load',
+    charaptersLoad: '[Charapter] load charapters',
     charapterLoadSingle: '[Charapter] Load single charapter',
+    storieLoad: '[Storie] Load stories',
     storieLoadSingle: '[Storie] Load single storie'
 
 

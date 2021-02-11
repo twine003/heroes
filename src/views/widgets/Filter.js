@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ButtonToolbar, Button, FormGroup, ControlLabel, FormControl, HelpBlock, Checkbox } from 'react-bootstrap';
+import { ButtonToolbar, Button, FormGroup, ControlLabel, FormControl, Checkbox } from 'react-bootstrap';
 // import './style.css';
 
 class Filters extends Component {

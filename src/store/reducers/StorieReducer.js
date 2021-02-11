@@ -24,7 +24,13 @@ export const storieReducer = ( state = stateInitial, action ) => {
                 single_storie: action.payload.storie,
             }
        
-    
+        case types.storieLoad:
+            return {
+              ...state,
+              stories: action.payload.stories,
+              maxPage: action.payload.maxPage,
+              page: action.payload.page,
+            }
         default:
             return state;
     }

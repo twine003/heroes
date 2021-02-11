@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, } from 'react-router-dom';
 import { startLoadingSingleCharapter } from '../../store/actions/charaptersActions';
-import Storie from '../stories/Storie';
+import StorieLink from '../stories/StorieLink';
 
 const CaracterScreen = () => {
     const dispatch = useDispatch();
@@ -54,7 +54,7 @@ const CaracterScreen = () => {
                                                     <ul>
                                                     {
                                                         single_character.stories?.items.map(historia=>(
-                                                            <Storie key={historia.name} name={historia.name} url={historia.resourceURI} ></Storie> 
+                                                            <StorieLink key={historia.name} name={historia.name} url={historia.resourceURI} ></StorieLink> 
                                                         ))
                                                     }
                                                     </ul>

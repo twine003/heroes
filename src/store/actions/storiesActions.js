@@ -1,7 +1,14 @@
 import {types} from '../types';
-import {  getStorieById} from '../services/API';
+import {getStorieById, getMarvelStories}  from '../services/API';
 
 
+export const startLoadingStories = ( options ) => {
+    return async( dispatch ) => {
+        const stories = await getMarvelStories( options );
+        dispatch( setStories( {...stories, page: options.page}));
+
+    }
+}
 
 export const startLoadingSingleStorie = ( options ) => {
     return async( dispatch ) => {
@@ -12,10 +19,10 @@ export const startLoadingSingleStorie = ( options ) => {
 }
 
 
-// export const setCharapters = ( charapters ) => ({
-//     type: types.charaptersLoad,
-//     payload: charapters
-// });
+export const setStories = ( stories ) => ({
+    type: types.storieLoad,
+    payload: stories
+});
 
 export const setSingleStorie = ( storie ) => ({
     type: types.storieLoadSingle,

@@ -41,7 +41,7 @@ import React from 'react';
 const CaractersScreen = React.lazy(() => import('./views/caracters/CaractersScreen'));
 const CaracterScreen = React.lazy(() => import('./views/caracters/CaracterScreen'));
 const storieScreen = React.lazy(() => import('./views/stories/StorieScreen'));
-const storiesScreen = React.lazy(() => import('./views/stories/StoriesScreen'));
+const StoriesScreen = React.lazy(() => import('./views/stories/StoriesScreen'));
 
 
 const routes = [
@@ -51,7 +51,7 @@ const routes = [
   { path: '/caracter/:id', name: 'Caracter', component: CaracterScreen },
   { path: '/caracters', name: 'Caracters', component: CaractersScreen },
   { path: '/storie/:id', name: 'Storie', component: storieScreen },
-  { path: '/stories', name: 'Stories', component: storiesScreen },
+  { path: '/stories', name: 'Stories', component: StoriesScreen },
 
 
 

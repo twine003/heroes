@@ -17,9 +17,10 @@ const Charapters = () => {
   const state_charapters = useSelector( state => state.characters);
   const charapters = state_charapters.characters || [];
   const [filter, setfilter] = useState('')
-
   
-
+  useEffect(() => {
+    search()
+  }, [dispatch]);
 
   const changePage = (page) => {
     if (page !== state_charapters.page) {
@@ -27,9 +28,7 @@ const Charapters = () => {
         page,
       });
     }
-  }
-
-  
+  }  
 
   const nextPages = (maxPage) => {
     console.log(maxPage);
@@ -46,6 +45,15 @@ const Charapters = () => {
 
   const search = (options = {}) => {
     // this.setState({ loading: true });
+
+    // const {
+    //   page = 1,
+    //   name = "jorge",
+    //   exactMatch,
+    //   sortName,
+    //   limit,
+    // } = options;
+
     const {
       page,
       name,
@@ -67,9 +75,7 @@ const Charapters = () => {
   }
 
 
-  useEffect(() => {
-    search()
-  }, [dispatch]);
+  
 
   const applyFilters = () => {
     console.log(filter);
@@ -86,7 +92,7 @@ const Charapters = () => {
     // afterFilter();
   }
 
-  const afterFilter = ({ page, maxPage }) => paginator.setPages(page, maxPage)
+  // const afterFilter = ({ page, maxPage }) => paginator.setPages(page, maxPage)
 
   // const sortByName = (event) => this.search({ page: this.state.page, sortName: event.target.value })
 

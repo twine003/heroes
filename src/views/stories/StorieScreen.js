@@ -63,6 +63,11 @@ const StorieScreen = () =>{
                                                                 />
                                                             </CCol>
                                                             <CCol sm="12" md="6" lg="6">
+                                                                <strong>Description:</strong>
+                                                                {
+                                                                    comic.description
+                                                                }
+                                                                <hr></hr>
                                                                 <strong>Characters:</strong>
                                                                 {
                                                                     comic.characters?.items.map(c=>(
